@@ -68,11 +68,6 @@ app.use(express.static("public"));
 // create routes
 app.use("/api/v1/auth", authRoutes);
 
-// 404 handler
-app.use((req, res, next) => {
-  next(new ApiError(404, `Route not found: ${req.method} ${req.originalUrl}`));
-});
-
 // Global error handler
 app.use(errorHandler);
 
