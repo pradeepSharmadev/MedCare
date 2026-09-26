@@ -26,7 +26,7 @@ const login = asyncHandler(async (req, res) => {
 
   console.log(email, password, "From Login Controller");
 
-  return res.status(201).json(new ApiResponse(201, {email}, "Logged In Success"))
+  return res.status(201).json(new ApiResponse(201, {name:"Pradeep", id:"123", role:"admin"}, "Logged In Success"))
 });
 
 export {
